@@ -1,6 +1,6 @@
 ReadMe Instructions
 
-> git clone https://github.com/kaviproject/ReduxSimpleStarter.git
+> git clone https://github.com/kaviproject/front-end-exercise.git
 > cd Assignment
 > npm install
 > npm start
