@@ -1,13 +1,18 @@
-ReadMe Instructions
+### Installation instructions
 
-> git clone https://github.com/kaviproject/front-end-exercise.git
-> cd Assignment
-> npm install
-> npm start
+Install node(for reference:https://nodejs.org/en/)
 
-Components
+```sh
+$ cd front-end-execise
+$ npm install
+$ npm start
+```
 
-Header component will store Header content
-TodoList component creating child components
-TodoDetail component responsible for checked/unchecked properties information
-Main component initiates TodoList component
+visit http://localhost:3000/
+
+### Architecture details
+
+Header.js- component will store Header content
+TodoList.js - component creating child components
+TodoDetail.js - component responsible for checked/unchecked properties information
+Main.js- component initiates TodoList component
