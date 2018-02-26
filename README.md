@@ -4,7 +4,7 @@ ReadMe Instructions
 > cd Assignment
 > npm install
 > npm start
-```
+
 Components
 
 Header component will store Header content
