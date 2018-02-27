@@ -41,9 +41,9 @@ export default class TodoList extends React.Component {
         //Extracting listitems from the list using map 
         var todos = this.state.taskList.map(function (todo) {
             return (
-                <tr key={todo.id} style={{ listStyleType: "none", border: '3px solid gray;'}} className="list-group-item">
+                <li key={todo.id} style={{ listStyleType: "none", border: '3px solid gray;'}} className="list-group-item">
                     <TodoDetail key={todo.id} kavi={todo} updateChecking={this.updateChecking} />
-                </tr>
+                </li>
             )
         }.bind(this))
         return (
@@ -52,12 +52,12 @@ export default class TodoList extends React.Component {
                  <br/>
                 <button type="submit"  style={{"marginLeft":'30%'}} onClick={this.checkall.bind(this)}>{this.state.checkAllStatus ? 'Unselect All' : 'Select All'}</button>
                 <br/>
-                <table className="col-md-4 list-group" style={{ "marginLeft":'30%',borderCollapse: 'collapse'}}>
-                    <tbody>
+                <ul className="col-md-4 list-group" style={{ "marginLeft":'30%',borderCollapse: 'collapse'}}>
+                  
                          &nbsp;&nbsp;
                     {todos}
-                    </tbody>
-                </table>
+                  
+                </ul>
                 <br />
             </div>
         )
