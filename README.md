@@ -8,7 +8,7 @@ $ npm install
 $ npm start
 ```
 
-visit http://localhost:3000/
+visit http://localhost:8080/
 
 ### Architecture details
 
