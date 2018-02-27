@@ -3,12 +3,13 @@ import React, { Component } from 'react';
 import TodoDetail from './TodoDetail';
 import Header from './Header';
 
+
 export default class TodoList extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            taskList: [{ task: "Hi", done: false, id: 1 }, { task: "Hello", done: false, id: 2 }],
+            taskList: [{ task: "My Task", done: false, id: 1 }, { task: "My Task", done: false, id: 2 },{ task: "My Task", done: false, id: 3 }],
             checkAllStatus: false,
         }
         // Bind the this context to the handler function
@@ -40,21 +41,23 @@ export default class TodoList extends React.Component {
         //Extracting listitems from the list using map 
         var todos = this.state.taskList.map(function (todo) {
             return (
-                <li key={todo.id} style={{ listStyleType: "none", border: "none" }} className="list-group-item">
+                <tr key={todo.id} style={{ listStyleType: "none", border: '3px solid black;'}} className="list-group-item">
                     <TodoDetail key={todo.id} kavi={todo} updateChecking={this.updateChecking} />
-                </li>
+                </tr>
             )
         }.bind(this))
         return (
             <div >
                 <Header />
-                <button type="submit" onClick={this.checkall.bind(this)}>{this.state.checkAllStatus ? 'Unselect All' : 'Select All'}</button>
-                <div className="col-md-4 offset-md-3" ></div>
-                <div className="col-md-8 offset-md-3" ></div>
-                <br />
-                <ul className="list-group">
+                 <br/>
+                <button type="submit"  style={{"marginLeft":'30%'}} onClick={this.checkall.bind(this)}>{this.state.checkAllStatus ? 'Unselect All' : 'Select All'}</button>
+                <br/>
+                <table className="col-md-4 list-group" style={{ "marginLeft":'30%',borderCollapse: 'collapse'}}>
+                    <tbody>
+                         &nbsp;&nbsp;
                     {todos}
-                </ul>
+                    </tbody>
+                </table>
                 <br />
             </div>
         )
