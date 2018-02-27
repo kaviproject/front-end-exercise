@@ -41,7 +41,7 @@ export default class TodoList extends React.Component {
         //Extracting listitems from the list using map 
         var todos = this.state.taskList.map(function (todo) {
             return (
-                <tr key={todo.id} style={{ listStyleType: "none", border: '3px solid black;'}} className="list-group-item">
+                <tr key={todo.id} style={{ listStyleType: "none", border: '3px solid gray;'}} className="list-group-item">
                     <TodoDetail key={todo.id} kavi={todo} updateChecking={this.updateChecking} />
                 </tr>
             )
