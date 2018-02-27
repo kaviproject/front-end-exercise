@@ -33,8 +33,8 @@ export default class TodoDetail extends React.Component {
     render() {
         return( 
          <div>
-                 <td style={{border: '3px solid 3px solid black;'}}><input type="checkbox" checked={this.state.isChecked} onChange={this.toggleCheckboxChange.bind(this)} /> &nbsp;&nbsp;</td>
-                 <td style={{border: '3px solid 3px solid black;'}} ><span style={{'textDecoration' : this.state.isChecked ? 'line-through' : 'none'}}>  {this.props.kavi.task}</span></td>
+               <input type="checkbox" checked={this.state.isChecked} onChange={this.toggleCheckboxChange.bind(this)} /> &nbsp;&nbsp;
+              <span style={{'textDecoration' : this.state.isChecked ? 'line-through' : 'none'}}>  {this.props.kavi.task}</span>
      </div>
         )
     }
