@@ -53,8 +53,11 @@ export default class TodoList extends React.Component {
                 <button type="submit"  style={{"marginLeft":'30%',boxShadow:'2px 5px #75A5B4'}} onClick={this.checkall.bind(this)}>{this.state.checkAllStatus ? 'Unselect All' : 'Select All'}</button>
                 <br/>
                 <ul className="col-md-4 list-group" style={{ "marginLeft":'30%',borderCollapse: 'collapse'}}>
-                  
-                         &nbsp;&nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                          <li className="list-group-item" style={{boxShadow:'7px 7px #75A5B4',borderBottom:'3px solid #979797',textAlign:'center'}}>
+
+                            <span><b>Oh, What to do</b> </span>
+                          </li>
                     {todos}
                   
                 </ul>
